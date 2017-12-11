@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var mongoose =require('mongoose');
 
 app.use(bodyParser.json());
+app.use(express.static(__dirname+'/client'));
 
 Genre = require('./models/genre.js');
 Book = require('./models/book.js')
@@ -89,7 +90,7 @@ app.put('/api/books/:_id',function(req,res){
         if(err){
             throw err ;
         }
-        res.json(book);
+        res.json(req.body);
     });
     
 });

@@ -15,17 +15,13 @@ var bookSchema = mongoose.Schema({
         type: String ,
         require: true
     },
-    name:{
-        type: String ,
-        require: true
-    },
     author:{
         type: String ,
         require: true
     },
     pages:{
-        type: Date,
-        default: Date.now
+        type: String,
+        default: "0"
     },
     publisher:{
         type: String ,
